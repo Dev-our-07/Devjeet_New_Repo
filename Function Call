@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+
+int incr5 (int a)
+{
+    return a+5;
+}
+
+int main()
+{   //Call by value
+   int x,y;
+   cout<<"Enter a number: ";
+   cin>>x;
+   y= incr5(x);
+   cout<<"The increased value of "<<x<<"is "<<y;
+   
+   //Call by refence
+   int *m; //pointer
+   int n;
+   cout<<"Enter a number: ";
+   cin>>&m;
+   n= incr5(&m);
+   cout<<"The increased value of "<<m<<"is "<<n;
+   
+   return 0;
+}
