@@ -1,0 +1,51 @@
+#p details{
+    color: #e6c9adb5
+}
+
+input[type="text"], input[type="password"], input[type="email"]:checked {
+  border: 1px solid #555;
+  color: #008000
+
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+input[type="checkbox"]:checked {
+  background-color: #008000;
+  border-color: #008000;
+  
+}
+
+input[type="checkbox"]:checked + label {
+  color: #0e8ec5; /* green color */
+}
+
+button {
+  background-color: #2a049b;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: #0a6723;
+  color: #127618;
+}
+
+a:hover {
+  color: #95cc08;
+}
+
+button:hover {
+  background-color: #8b2db6;
+}
