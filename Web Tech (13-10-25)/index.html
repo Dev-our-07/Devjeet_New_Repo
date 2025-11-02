@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Calculator</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body id="body" style= "background-repeat: no-repeat;background-size: cover; background-attachment: fixed; background-image: url(https://i.pinimg.com/736x/a0/dd/88/a0dd88e05c52464466ea4d04abfa5a78.jpg);">
+        <header>
+            <h1>Simple Calculator</h1>
+        </header>
+
+        <form name="calculator" id="buttons"></form>
+            <section class="calculator">
+                <input type="text" name="display" id="display" disabled>
+                <br /><br />
+            </section>        
+            <section class="keypad">
+                <div class="button">
+                <label for="buttons">
+                    <grid id="calci">
+                        
+                        <input type="button" value="1" onclick="calculator.display.value += '1'">
+                        
+                        <input type="button" value="2" onclick="calculator.display.value += '2'">
+                        
+                        <input type="button" value="3" onclick="calculator.display.value += '3'">
+                        
+                        <input type="button" value="+" onclick="calculator.display.value += '+'">
+                        
+                        <br>
+                        
+                        <input type="button" value="4" onclick="calculator.display.value += '4'">
+                        
+                        <input type="button" value="5" onclick="calculator.display.value += '5'">
+                        
+                        <input type="button" value="6" onclick="calculator.display.value += '6'">
+
+                        <input type="button" value="-" onclick="calculator.display.value += '-'">
+                        
+                        <br>
+                        
+                        <input type="button" value="7" onclick="calculator.display.value += '7'">
+
+                        <input type="button" value="8" onclick="calculator.display.value += '8'">
+
+                        <input type="button" value="9" onclick="calculator.display.value += '9'">
+
+                        <input type="button" value="*" onclick="calculator.display.value += '*'">
+
+                        <br>
+                       
+                        <input type="button" value="C" onclick="calculator.display.value = ''">
+
+                        <input type="button" value="0" onclick="calculator.display.value += '0'">
+
+                        <input type="button" value="=" onclick="calculate()">
+
+                        <input type="button" value="/" onclick="calculator.display.value += '/'">
+                        <br>
+                    </grid>
+                </label><br>
+                </div>    
+            </section>
+        </form>      
+    </body>       
+</html>

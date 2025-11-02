@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="page" href="dashboard.html">
+</head>
+<body>
+    <span style="color:#000000; font-family: Verdana;" Align= center>
+        <U><b><h1>CAR SURF</h1></b></U>
+        <h2><u><strong>Makes Surfing Cars easier for you</strong></u></h2>
+    </span>
+
+    <marquee behavior="scroll" direction="left" scrollamount="10" style="color: #002f1d ; font-family: Verdana;" id="banner">
+        <em>Welcome to the Car Surf website! Please login to access your account and explore our exciting car collection.</em>
+    </marquee>    
+
+    <span style="color:rgba(10, 81, 188, 0.756); font-family: Centaur;">
+    
+        <div style="position: relative;">
+            <iframe id="login" src="about:blank" width="500" height="500" frameborder="0">
+
+            </iframe>
+        
+            <div id="frame">
+                <form method="post" id="f1" action="dashboard.html" style="color: #ffffce ; font-family: Verdana">
+                    <caption>
+                        <h2><u>Login to your Account</u></h2>
+                    </caption>
+                    <br><em>Please fill in the following details to login yourself:</em><br><br>
+                        <table style="color: #ffffce ; border: 0" cellspacing="0" cellpadding="3">
+                                <tr>
+                                    <td>
+                                        <label for="name" >Name: <input type="text" size="30" id="name" placeholder="Enter your name" required></label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label for="email" required>Email address: <br><input type="email" size="30" id="email" placeholder="Enter your email"></label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label for="User">Username:</label><br><input type="text" size="30" id="User" placeholder="Enter your username" >
+                                    </td>
+                                </tr>
+                                <tr>   
+                                    <td>
+                                        <label for="password" required>Password:</label><br><input type="password" size="30" id="password" placeholder="Enter your password">
+                                    </td>
+                                </tr>
+                                <tr>
+                                <td>
+                                    <label for="remember">
+                                        <input type="checkbox" id="remember"> Remember me
+                                    </label>
+                                <br /><br /> 
+                                    <label for="Submit">
+                                        <button type="button" id="S" onclick="window.location.href='dashboard.html'">Submit</button>
+                                    </label>
+                                </td>
+                                </tr>
+                            </table>
+                </form>
+            </div>
+        </div>
+    </span>
+</body>
+</html>

@@ -1,0 +1,119 @@
+/**/
+#login {
+    display: block;
+    margin: 100px auto;
+   /* background-color: #4a4a4a;*/
+   background-color: #0c2f0846;
+    border: 5px dotted #465c42;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height: 650px;
+}
+
+
+
+#login:hover {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+
+#frame {
+    position: absolute;
+    color: #000000;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+}
+
+#frame:hover {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+
+input[type="text"], input[type="password"], input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+input[type="submit"], button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+body {
+    background-image: url('https://i.pinimg.com/736x/32/c4/27/32c4271e4023fcedcf8da8ec4aeafc21.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
+
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.373); /* White with 50% opacity */
+    z-index: -1;
+    pointer-events: none;
+}
+
+#f1 {
+    background-color: #4f694f;
+    text-align: left;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#S{
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px 20px;
+}
+
+#S:hover {
+    background-color: #202d22;
+}
+
+a {
+    text-decoration: none;
+    color: #020603;
+}
+
+a:hover {
+    color: #95cc08;
+}
+h1 {
+    margin: 10;
+    padding: 10;
+    text-align: center;
+    font-family: 'Broadway', sans-serif;
+    color: #000000;
+}
+
+h2 {
+    margin: 10;
+    padding: 10;
+    text-align: center;
+    font-family: 'Bradley Hand ITC', sans-serif;
+    color: #bcffd2;
+}

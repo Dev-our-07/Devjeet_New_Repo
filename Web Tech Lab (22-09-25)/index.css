@@ -1,0 +1,82 @@
+.profile-pic {
+    border-color:#0b272a ;
+    border-width: 25px;
+    width: 200px;
+    height: 250px;
+    border-radius: 50px;
+    box-shadow: beige;
+    margin: 20px;
+}
+
+.col{
+    border-radius: 50px;
+    float: left;
+    width: 50%;
+    height: auto ;
+    background-color: #000000;
+    margin-left: 20px;
+}
+
+body {
+  
+  font-family: Tempus Sans ITC, sans-serif;
+  font-style: oblique;
+  margin: 20px;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+p {
+  margin-bottom: 20px;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+li {
+  margin-bottom: 10px;
+}
+.Mail{
+    color: #edc993;
+
+}
+a {
+  text-decoration: none;
+  color: #020603;
+}
+a:hover {
+  color: #95cc08;
+}
+button {
+background-color: #c09a5d;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #3e8e41;
+}
+
+.column1 {
+    border-radius: 50px;
+  float: left;
+  width: 50%;
+    height: auto ;
+  background-color: #7b9c92;
+}
+.column2 {
+    border-radius: 50px;
+  float: right;
+  width: 50%;
+  height: auto ;
+  background-color: #244747;
+}
+
+.Bio1, .Bio2 {
+    border-radius: 50px;
+    margin-left: 20px;
+}

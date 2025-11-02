@@ -1,0 +1,26 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build and Run C++",
+            "type": "process",
+            "command": "g++",
+            "args": [
+                "-Wall",
+                "-Wextra",
+                "-g",
+                "OOP C++ Lab\\2. Swap two numbers.cpp",
+                "-o",
+                "OOP C++ Lab\\output\\2_Swap_two_numbers.exe"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "detail": "Compile C++ source file"
+        }
+    ]
+}

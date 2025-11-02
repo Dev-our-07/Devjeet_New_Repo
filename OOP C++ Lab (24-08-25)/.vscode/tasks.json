@@ -1,0 +1,38 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "C/C++ Compile Run: Compile",
+            "command": "g++",
+            "args": [
+                "-Wall",
+                "-Wextra",
+                "-g3",
+                "${file}",
+                "-o",
+                "${workspaceFolder}\\output\\${fileBasenameNoExtension}.exe"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": ["$gcc"],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "Compile C++ files with g++"
+        },
+        {
+            "type": "shell",
+            "label": "C/C++ Compile and Run",
+            "command": "${workspaceFolder}\\output\\${fileBasenameNoExtension}.exe",
+            "dependsOn": "C/C++ Compile Run: Compile",
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            },
+            "detail": "Compile and run C++ file"
+        }
+    ]
+}
