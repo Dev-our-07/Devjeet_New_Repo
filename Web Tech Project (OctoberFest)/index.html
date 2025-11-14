@@ -5,69 +5,83 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="index.css">
-    <link rel="page" href="dashboard.html">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-    <span style="color:#000000; font-family: Verdana;" Align= center>
-        <U><b><h1>CAR SURF</h1></b></U>
-        <h2><u><strong>Makes Surfing Cars easier for you</strong></u></h2>
-    </span>
-    <marquee behavior="scroll" direction="left" scrollamount="10" style="color: #002f1d ; font-family: Verdana;" id="banner">
-        <em>Welcome to the Car Surf website! Please login to access your account and explore our exciting car collection.</em>
-    </marquee>    
+    <header class="main-header">
+        <div class="nav-left">
+            <a href="home.html" class="brand">
+                <img src="public/logo.webp" alt="Cars Festival" class="logo">
+                <span class="site-title">CARS FESTIVAL</span>
+            </a>
+        </div>
+        <button class="nav-toggle" aria-controls="main-nav" aria-expanded="false">☰</button>
+        <nav class="main-nav" id="main-nav">
+            <i class="fa-solid fa-house"><a href="home.html">Dashboard</a></i>
+            <i class="fa-solid fa-pen-to-square"><a href="index.html">Login</a></i>
+            <i class="fa-solid fa-phone"><a href="contact.html">Contact</a></i>
+        </nav>
+    </header>
 
-    <span style="color:rgba(10, 81, 188, 0.756); font-family: Centaur;">
-    
-        <div style="position: relative;">
-            <iframe id="login" src="about:blank" width="500" height="500" frameborder="0">
-            </iframe>
+    <div id="banner" class="marquee">
+        <div class="marquee__inner">Welcome to Project Kuruma! Please login to access your account and explore our exciting car collection.</div>
+    </div>
+
+    <div class="frame-container">
+        <div>
+            <iframe id="login" title="Login preview" src="about:blank" width="500" height="500" frameborder="0"></iframe>
+        
         
             <div id="frame">
-                <form method="post" id="f1" action="dashboard.html" style="color: #ffffce ; font-family: Verdana">
-                    <caption>
-                        <h2><u>Login to your Account</u></h2>
-                    </caption>
-                    <br><em>Please fill in the following details to login yourself:</em><br><br>
-                        <table style="color: #ffffce ; border: 0" cellspacing="0" cellpadding="3">
-                                <tr>
-                                    <td>
-                                        <label for="name" >Name:</label>
-                                        <input type="text" size="30" id="name" name="name" placeholder="Enter your name" required>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <label for="email">Email address:</label><br>
-                                        <input type="email" size="30" id="email" name="email" placeholder="Enter your email" required>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <label for="User">Username:</label><br>
-                                        <input type="text" size="30" id="User" name="username" placeholder="Enter your username" required>
-                                    </td>
-                                </tr>
-                                <tr>   
-                                    <td>
-                                        <label for="password">Password:</label><br>
-                                        <input type="password" size="30" id="password" name="password" placeholder="Enter your password" required>
-                                    </td>
-                                </tr>
-                                <tr>
+                <form method="post" id="f1" action="home.html">
+                    <em>Please fill in the following details to login yourself:</em><br><br>
+                        <table cellspacing="0" cellpadding="3">
+                            <caption>
+                                <h2><u>Login to your Account</u></h2>
+                            </caption>
+                            <tr>
+                                <td>
+                                    <label for="name" >Name:</label>
+                                    <input type="text" size="30" id="name" name="name" placeholder="Enter your name" required>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="email">Email address:</label><br>
+                                    <input type="email" size="30" id="email" name="email" placeholder="Enter your email" required>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="User">Username:</label><br>
+                                    <input type="text" size="30" id="User" name="username" placeholder="Enter your username" required>
+                                </td>
+                            </tr>
+                            <tr>   
+                                <td>
+                                    <label for="password">Password:</label><br>
+                                    <input type="password" size="30" id="password" name="password" placeholder="Enter your password" required>
+                                </td>
+                            </tr>
+                            <tr>
                                 <td>
                                     <label for="remember">
                                         <input type="checkbox" id="remember" name="remember" required> Remember me
                                     </label>
                                 <br /><br /> 
                                     <label for="Submit">
-                                    <button type="post" id="S">Submit</button>
+                                        <button type="submit" id="Submit">Submit</button>
                                     </label>
                                 </td>
-                                </tr>
-                            </table>
+                            </tr>
+                        </table>
                 </form>
             </div>
         </div>
-    </span>
+    </div>
+
+    <footer class="site-footer">
+        &copy; 2024 Cars Festival. All rights reserved.
+    </footer>
 </body>
 </html>
