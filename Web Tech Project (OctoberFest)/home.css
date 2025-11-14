@@ -216,7 +216,7 @@ iframe:hover{
     height: 100%;
 }
 
-/* Defensive offset so the fixed sidebar never overlaps the main content on wide screens */
+
 @media (min-width: 900px) {
     .main-content {
         margin-left: calc(var(--sidebar-gap) + var(--sidebar-width) + 30px);
@@ -278,7 +278,6 @@ iframe:hover{
 
 
 .stat-card .sketchfab-embed-wrapper {
-    /* let the embed wrapper grow to fill remaining vertical space inside the card */
     flex: 1 1 auto;
     min-height: 160px; 
     width: 100%;
@@ -294,7 +293,7 @@ iframe:hover{
         object-fit: contain; 
     }
 
-/* Responsive fallback: on small screens use 2 columns or single column */
+
 @media (max-width: 960px) {
     .stats-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -311,7 +310,7 @@ iframe:hover{
     }
 }
 
-/* Responsive embed size adjustments for medium screens */
+
 @media (max-width: 960px) {
     .stat-card .sketchfab-embed-wrapper {
         min-height: 180px;
