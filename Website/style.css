@@ -1,0 +1,86 @@
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+
+    background-image: linear-gradient(rgba(255,255,255,0.445), rgba(255,255,255,0.445)),
+                      url('https://i.pinimg.com/736x/32/c4/27/32c4271e4023fcedcf8da8ec4aeafc21.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+title{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #020603;
+}
+
+a:hover {
+    color: #2d6d32;
+}
+
+#S{
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px 20px;
+}
+
+#S:hover {
+    background-color: #45a049;
+}
+
+#f1{
+    color: #0e0e0b ; 
+    font-family: Verdana;
+
+}
+
+#frame{
+    position: relative;
+    background-color: #63ff606d;
+    color: #000000;
+}
+
+#form{
+    color: #001249 ; 
+    font-family: Verdana;
+}
+
+fieldset {
+    border: 3px double #000000; 
+    padding: 10px; 
+    width: 400px; 
+    margin: auto; 
+    font-family: Georgia, 'Times New Roman', Times, serif; 
+    background-color: rgba(206, 251, 216, 0.338);
+}
+
+button :hover {
+    background-color: #45a049;
+}
+
+input :hover {
+    background-color: #45a049;
+}
+
+legend {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif,cursive;  
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #f1f1f1;
+    width: 100%;
+    font-family: Verdana;
+    margin-top: auto;
+}

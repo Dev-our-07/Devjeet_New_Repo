@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="page" href="dashboard.html">
+</head>
+<body>
+    <header>
+         <div class="title">
+            <U><b><h1>Car Wiki</h1></b></U>
+            <em><u><strong>All your favourite models at one place</strong></u></em>
+        </div>
+        
+        <nav>
+            <a href="index.html">Home</a> &nbsp;&nbsp;
+            <a href="about.html">About Us</a> &nbsp;&nbsp;
+            <a href="dashboard.html">Car Models</a> &nbsp;&nbsp;
+            <a href="contact.html">Contact Us</a> &nbsp;&nbsp;
+            <a href="login.html">Login</a> &nbsp;&nbsp;
+        </nav>
+    </header>
+
+    <hr />
+
+    <main>
+        <span class="intro">
+            <div id="frame">
+                    <caption><h2>
+                            Welcome to the Car Surf website! <br>
+                            Please login to access your account and explore our exciting car collection.
+                    </h2></caption>
+            </div>
+        </span>
+        <span id="form">
+            <form method="post" id="f1" action="dashboard.html">
+                    <fieldset>
+                        <legend>
+                        <em>Please fill in the following details to login yourself:</em>
+                        </legend>
+                            
+                        <br><br>
+                    
+                        <label for="name" >Name:
+                            <input type="text" size="30" id="name" name="name" placeholder="Enter your name" required>
+                        </label> 
+
+                        <br /><br />
+
+                        <label for="email">Email address:
+                                <input type="email" size="30" id="email" name="email" placeholder="Enter your email" required>
+                        </label>            
+                        
+                        <br /><br />
+
+                        <label for="User">Username:
+                            <input type="text" size="30" id="User" name="username" placeholder="Enter your username" required>
+                        </label>
+
+                        <br /><br />
+
+                        <label for="password">Password:
+                            <input type="password" size="30" id="password" name="password" placeholder="Enter your password" required>
+                        </label> 
+
+                            <br /><br />
+
+                        <label for="remember">
+                            <input type="checkbox" id="remember" name="remember" required> 
+                            Remember me
+                        </label>
+
+                            <br /><br /> 
+
+                        <label for="Submit">
+                            <a href="dashboard.html">
+                            <button type="submit" id="S">Submit</button></a>
+                        </label>
+
+                        <br /><br />
+                            
+                    </fieldset>
+                </form>
+        </span>
+    </main>
+
+    
+    
+    <hr />
+
+    <footer>
+        <p>&copy; 2024 Car Wiki. All rights reserved.</p>
+    </footer>
+</body>
+</html>
