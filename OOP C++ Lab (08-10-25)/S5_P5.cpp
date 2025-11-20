@@ -11,104 +11,73 @@ Use operator overloading with an array-based merging logic.*/
 #include <string>
 using namespace std;
 
-class Item {
+class Item{
+    public:
     int code;
     string name;
     int quantity;
 
-    public:
-    Item()      //default constructor
-    {
+
+    Item() {
         code = 0;
         name = "";
         quantity = 0;
     }
 
-    Item(int c, string n, int q)   //parameterized constructor
-    {
-        code = c;
-        name = n;
-        quantity = q;
+    void inputData() {
+        cout << "Enter Item Code, Name and Quantity: ";
+        cin >> code >> name >> quantity;
     }
 
-    
-    Item operator+(const Item& obj) 
+    Item operator+(const Item& other) 
     {
-        if (code == obj.code) {
-            return Item(code, name, quantity + obj.quantity);
+        Item result;
+        if (code == other.code) {
+            result.code = code;
+            result.name = name;
+            result.quantity = quantity + other.quantity;
         } 
+        
         else {
-            return Item(); // Return a default item if codes don't match
+            result = *this; // If codes don't match, return the original item
         }
+        return result;
     }
 };
 
 int main()
 {
-    int n1, n2;
-    cout << "Enter number of items in first inventory: ";
-    cin >> n1;
+    int n;
+    cout << "Enter number of items in each inventory: ";
+    cin >> n;
 
-    Item inv1[n1];   //array of objects for first inventory
+    Item* inventory1 = new Item[n];
+    Item* inventory2 = new Item[n];
+    Item* mergedInventory = new Item[n];
 
-    for (int i = 0; i < n1; i++) {
-        int c, q;
-        string n;
-        cout << "Enter Item Code, Name and Quantity: ";
-        cin >> c >> n >> q;
-        inv1[i] = Item(c, n, q);
+    cout << "Enter details for Inventory 1:" << endl;
+    for (int i = 0; i < n; ++i) {
+        inventory1[i].inputData();
     }
 
-    cout << "Enter number of items in second inventory: ";
-    cin >> n2;
-
-    Item inv2[n2];   //array of objects for second inventory
-
-    for (int i = 0; i < n2; i++) {
-        int c, q;
-        string n;
-        cout << "Enter Item Code, Name and Quantity: ";
-        cin >> c >> n >> q;
-        inv2[i] = Item(c, n, q);
+    cout << "Enter details for Inventory 2:" << endl;
+    for (int i = 0; i < n; ++i) {
+        inventory2[i].inputData();
     }
 
-    Item mergedInv[n1 + n2]; // Array to hold merged inventory
-    int k = 0;
-
-    // Merging logic
-    for (int i = 0; i < n1; i++) {
-        bool found = false;
-        for (int j = 0; j < n2; j++) {
-            if (inv1[i].code == inv2[j].code) {
-                mergedInv[k++] = inv1[i] + inv2[j];
-                found = true;
-                break;
-            }
-        }
-        if (!found) {
-            mergedInv[k++] = inv1[i];
-        }
-    }
-
-    for (int j = 0; j < n2; j++) {
-        bool found = false;
-        for (int i = 0; i < n1; i++) {
-            if (inv2[j].code == inv1[i].code) {
-                found = true;
-                break;
-            }
-        }
-        if (!found) {
-            mergedInv[k++] = inv2[j];
-        }
+    // Merging inventories
+    for (int i = 0; i < n; ++i) {
+        mergedInventory[i] = inventory1[i] + inventory2[i];
     }
 
     cout << "Merged Inventory:" << endl;
-    for (int i = 0; i < k; i++) {
-        cout << "Item Code: " << mergedInv[i].code 
-             << ", Name: " << mergedInv[i].name 
-             << ", Quantity: " << mergedInv[i].quantity << endl;
+    for (int i = 0; i < n; ++i) {
+        cout << "Item Code: " << mergedInventory[i].code << ", Name: " << mergedInventory[i].name << ", Quantity: " << mergedInventory[i].quantity << endl;
     }
+
+    delete[] inventory1;
+    delete[] inventory2;
+    delete[] mergedInventory;
 
     return 0;
 }

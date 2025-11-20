@@ -33,7 +33,7 @@ body{
     top:0;
     z-index:300;
 }
-
+/*Theme store*/
 .brand{display:flex;align-items:center;gap:.5rem;text-decoration:none;color:var(--muted)}
 .brand .logo{height:44px}
 .site-title{font-weight:700;color:var(--accent);font-size:1.1rem}
@@ -48,7 +48,7 @@ body{
 .site-footer{background:#000;color:var(--muted);padding:1rem;text-align:center;border-top:1px solid rgba(255,255,255,0.03);margin-top:2rem}
 
 /* End theme */
-/**/
+
 #login {
     display: block;
     margin: 100px auto;

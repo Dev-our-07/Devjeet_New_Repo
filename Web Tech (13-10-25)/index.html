@@ -6,63 +6,95 @@
         <title>Calculator</title>
         <link rel="stylesheet" href="style.css">
     </head>
-    <body id="body" style= "background-repeat: no-repeat;background-size: cover; background-attachment: fixed; background-image: url(https://i.pinimg.com/736x/a0/dd/88/a0dd88e05c52464466ea4d04abfa5a78.jpg);">
+    <body id="body" style="background-repeat: no-repeat;background-size: cover; background-attachment: fixed; background-image: url(https://i.pinimg.com/736x/a0/dd/88/a0dd88e05c52464466ea4d04abfa5a78.jpg);">
         <header>
             <h1>Simple Calculator</h1>
         </header>
 
-        <form name="calculator" id="buttons"></form>
+        <form name="calculator" id="calculator" autocomplete="off" onsubmit="return false;">
             <section class="calculator">
-                <input type="text" name="display" id="display" disabled>
+                <input type="text" name="display" id="display" readonly aria-label="Calculator display">
                 <br /><br />
-            </section>        
+            </section>
+
             <section class="keypad">
                 <div class="button">
-                <label for="buttons">
-                    <grid id="calci">
-                        
-                        <input type="button" value="1" onclick="calculator.display.value += '1'">
-                        
-                        <input type="button" value="2" onclick="calculator.display.value += '2'">
-                        
-                        <input type="button" value="3" onclick="calculator.display.value += '3'">
-                        
-                        <input type="button" value="+" onclick="calculator.display.value += '+'">
-                        
+                    <div id="calci" role="group" aria-label="calculator buttons">
+                        <button type="button" data-value="1">1</button>
+                        <button type="button" data-value="2">2</button>
+                        <button type="button" data-value="3">3</button>
+                        <button type="button" data-value="+">+</button>
                         <br>
-                        
-                        <input type="button" value="4" onclick="calculator.display.value += '4'">
-                        
-                        <input type="button" value="5" onclick="calculator.display.value += '5'">
-                        
-                        <input type="button" value="6" onclick="calculator.display.value += '6'">
 
-                        <input type="button" value="-" onclick="calculator.display.value += '-'">
-                        
+                        <button type="button" data-value="4">4</button>
+                        <button type="button" data-value="5">5</button>
+                        <button type="button" data-value="6">6</button>
+                        <button type="button" data-value="-">-</button>
                         <br>
-                        
-                        <input type="button" value="7" onclick="calculator.display.value += '7'">
 
-                        <input type="button" value="8" onclick="calculator.display.value += '8'">
-
-                        <input type="button" value="9" onclick="calculator.display.value += '9'">
-
-                        <input type="button" value="*" onclick="calculator.display.value += '*'">
-
+                        <button type="button" data-value="7">7</button>
+                        <button type="button" data-value="8">8</button>
+                        <button type="button" data-value="9">9</button>
+                        <button type="button" data-value="*">*</button>
                         <br>
-                       
-                        <input type="button" value="C" onclick="calculator.display.value = ''">
 
-                        <input type="button" value="0" onclick="calculator.display.value += '0'">
-
-                        <input type="button" value="=" onclick="calculate()">
-
-                        <input type="button" value="/" onclick="calculator.display.value += '/'">
+                        <button type="button" id="clear">C</button>
+                        <button type="button" data-value="0">0</button>
+                        <button type="button" id="equals">=</button>
+                        <button type="button" data-value="/">/</button>
                         <br>
-                    </grid>
-                </label><br>
+                    </div>
                 </div>    
             </section>
         </form>      
-    </body>       
+
+        <script>
+            const display = document.getElementById('display');
+
+            // Only select the buttons that provide values (data-value)
+            const valueButtons = document.querySelectorAll('#calci button[data-value]');
+            const clearBtn = document.getElementById('clear');
+            const equalsBtn = document.getElementById('equals');
+
+            // Append value to display when a value button is pressed
+            valueButtons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    display.value += btn.getAttribute('data-value');
+                });
+            });
+
+            // Clear display
+            clearBtn.addEventListener('click', () => {
+                display.value = '';
+            });
+
+            // Safe evaluation: allow only digits, whitespace, operators, parentheses and dot
+            function safeEval(expr) {
+                if (!expr || !expr.trim()) return '';
+                // allow digits, spaces, + - * / % . and parentheses
+                if (!/^[0-9+\-*/().%\s]+$/.test(expr)) return 'Error';
+                try {
+                    // Use Function to evaluate expression in strict mode
+                    // This returns a value for valid arithmetic expressions
+                    // Wrap in parentheses to allow expressions like "2+3"
+                    const fn = new Function('"use strict"; return (' + expr + ')');
+                    const result = fn();
+                    // Check result is finite number
+                    if (typeof result === 'number' && isFinite(result)) return String(result);
+                    return 'Error';
+                } catch (e) {
+                    return 'Error';
+                }
+            }
+
+            // Evaluate when equals clicked
+            equalsBtn.addEventListener('click', () => {
+                const result = safeEval(display.value);
+                display.value = result;
+            });
+
+            // prevent any accidental input via keyboard/paste by keeping readonly
+            // optionally you may want to allow keyboard support by removing readonly and adding key handling
+        </script>
+    </body>
 </html>

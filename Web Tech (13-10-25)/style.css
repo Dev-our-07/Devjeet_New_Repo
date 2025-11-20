@@ -124,3 +124,8 @@ input[type="button"]:hover {
     height: auto;
 }
 
+.keypad{
+    text-align: center;
+    height: 100%;
+
+}
