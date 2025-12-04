@@ -35,16 +35,15 @@ public:
             average = 0.0;
     }
 
-    double getAverage() const {
+    double getAverage() {
         return average;
     }
 
-    void displayData() const {
+    void displayData()  {
         cout << "Player Name: " << playerName << endl;
         cout << "Matches: " << matches << endl;
         cout << "Runs: " << runs << endl;
         cout << "Average: " << average << endl;
-        cout << "---------------------------" << endl;
     }
 };
 

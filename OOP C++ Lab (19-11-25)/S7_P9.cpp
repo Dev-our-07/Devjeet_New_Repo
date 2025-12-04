@@ -10,3 +10,6 @@ pop
 Output: 
 Full 
 2*/
+#include <iostream>
+#include <string>
+using namespace std;

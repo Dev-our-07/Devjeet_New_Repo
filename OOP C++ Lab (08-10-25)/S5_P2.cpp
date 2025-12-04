@@ -1,6 +1,6 @@
 /*2. Employee Salary Slip Generator 
-Concepts: Constructor overloading, array of objects, computation logic 
-Problem: 
+
+Concepts: Constructor overloading, array of objects, computation logic Problem: 
 Define a class Employee with data members id, name, basicSalary, hra, da, and netSalary. 
 • Overload constructors: one default and one parameterized. 
 • Store records of n employees in an array. 

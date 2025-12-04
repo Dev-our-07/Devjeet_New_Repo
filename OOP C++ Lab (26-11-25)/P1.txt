@@ -1,0 +1,4 @@
+Create a C++ program that reads a text file and counts the total number of characters, 
+words, and lines present in it. Use file-handling functions and string processing 
+techniques. Display all three counts separately at the end.
+Part 1 and Part 2
